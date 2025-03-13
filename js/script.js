@@ -14,7 +14,11 @@ function validarPassword()
 
 function validarForm()
 {
-    return validarPassword() && ValidarCoincidencia() && ValidarNombre();
+    let ret = validarPassword() && ValidarCoincidencia() && ValidarNombre();
+    if(ret){
+        alert("Bienvenido!");
+    }
+    return ret;
 }
 
 function ValidarCoincidencia(){
@@ -33,27 +37,3 @@ function VerificarCantCaracteres(palabra, caracteres){
      mensajeA.style.color = (palabra.length > caracteres ? "green" : "red");   
      return mensajeA.style.color == "green";
 }
-
-
-
-
-
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
