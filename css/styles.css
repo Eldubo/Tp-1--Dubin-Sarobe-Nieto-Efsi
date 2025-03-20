@@ -284,7 +284,7 @@ body.modo-oscuro input[type="email"],
 body.modo-oscuro input[type="password"] {
     background-color: #333; /* Fondo de inputs negro en modo oscuro */
     color: #ffffff; /* Texto blanco en inputs en modo oscuro */
-    border: 1px solid #555; /* Borde de inputs más oscuro en modo oscuro */
+    border: 1px solid #b915b9; /* Borde de inputs más oscuro en modo oscuro */
 }
 
 .btn-primary {

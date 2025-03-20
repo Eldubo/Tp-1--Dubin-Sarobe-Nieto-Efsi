@@ -7,7 +7,7 @@
     var mensajeMail = document.getElementById("textomail");
 
     const abc = /[^a-zA-Z0-9]/;
-
+    const expresionRegular = /^[a-zA-Z]+$/;
 
 function validarPassword()
 {
@@ -51,10 +51,15 @@ function ValidarCoincidencia(){
 
 
 function ValidarNombre(){
+    
+    let ret = false;
     console.log("Entra a ValidarNombre");
     let nombre = document.getElementById("pnombre").value;
-    console.log(nombre)
-    return VerificarCantCaracteres(nombre, 3, nombre8Caracteres);
+    console.log(nombre);
+    if(expresionRegular.test(nombre)){
+       ret = VerificarCantCaracteres(nombre, 3, nombre8Caracteres)
+    } 
+    return ret;
 } 
 
 function VerificarCantCaracteres(palabra, caracteres, contraseña3Caracteres){
