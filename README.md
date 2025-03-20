@@ -11,6 +11,7 @@ Para el campo Email que haya una combinación de letras y números, luego un @, 
 Para la contraseña validamos que tenga un número, una mayúscula y un caracter especial (esto último con un .test, lo anterior igualando a un LowerCase). 
 
 Desafíos: 
+Hacer funcionar el modo oscuro y claro 
 
 Mejoras: 
 Hacer más extras 
