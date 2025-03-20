@@ -2,7 +2,7 @@
  Formulario con verificación
 
 Interfaz: 
-
+Para hacer la pagina primero pensamos en como debería estar estructurada. Empezamos haciendo el HTML y diseñando la base del proyecto. Luego utilizamos JavaScript para poder hacer la pagina funcional y que responda a lo que necesitamos que pase. Finalmente, una vez que teníamos la página funcionando, utilizamos CSS para darle color al formulario. Además creamos un botón para cambiar de "modo claro" a "modo oscuro" y en este ultimo cambiamos los colores cálidos por unos más apagados. 
 Verificaciones:
 Para todos los campos hicimos que haga la validación cada vez que agregue un nuevo caracter. 
 
