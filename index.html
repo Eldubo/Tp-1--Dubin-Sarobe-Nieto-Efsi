@@ -12,20 +12,20 @@
     
     <label for="pnombre">Nombre completo: </label> <br>
     <input type="text" name="" id="pnombre" onkeyup="ValidarNombre()" ><br>
-    <p id="textonombre" style="color:red;">El nombre debe contener al menos 3 caracteres</p>
+    <p id="textonombre" style="color:red; display:none;">El nombre debe contener al menos 3 caracteres</p>
     <label for="Email">Email: </label><br>
     <input type="text" name="Email" id="Email" onkeyup="ValidarEmail()"><br>
-    <p id="textomail" style="color: red;">El mail no es válido</p>
+    <p id="textomail" style="color: red; display:none;">El mail no es válido</p>
     <label for="Email">Contraseña:  </label><br>
     <input type="password" class="form-control" id="pass1"  name="PassWord"  onkeyup="validarPassword()"  /><br>
-    <span style="color:red;" id="mensajeA">La contraseña debe contener al menos 8 caracteres</span><br>
-    <span style="color:red;" id="mensajeB">La contraseña debe contener al menos una mayúscula</span><br>
-    <span style="color:red;" id="mensajeC">La contraseña debe contener al menos un caracter especial</span><br>
+    <span style="color:red; display:none;" id="mensajeA">La contraseña debe contener al menos 8 caracteres</span><br>
+    <span style="color:red; display:none;" id="mensajeB">La contraseña debe contener al menos una mayúscula</span><br>
+    <span style="color:red; display:none;" id="mensajeC">La contraseña debe contener al menos un caracter especial</span><br>
 
 
     <label for="Email">Confirmar contraseña: </label><br>
     <input type="password" name="" id="pass2"  onkeyup="ValidarCoincidencia()"><br>
-    <span id="msjError" style="color:red">Las contraseñas no coinciden  </span>
+    <span id="msjError" style="color:red; display:none;">Las contraseñas no coinciden  </span>
 
     <div class="col-12" style="display: flex; justify-content: flex-end;">
         <button class="btn btn-primary" type="submit">Enviar</button>

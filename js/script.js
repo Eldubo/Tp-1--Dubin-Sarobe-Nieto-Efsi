@@ -14,18 +14,19 @@ function validarPassword()
     console.log("Entra a validarPassword");
     let pass1 = document.getElementById("pass1").value;
     alMenos1Mayus.style.color = (pass1===pass1.toLowerCase() ? "red" : "green");   
-    alMenos1CaracterEspecial.style.color = (abc.test(pass1) ? "green" : "red"); 
-    
-    
+    alMenos1CaracterEspecial.style.color = (abc.test(pass1) ? "green" : "red");
+    mensajeErrorDisplay(alMenos1Mayus);
+    mensajeErrorDisplay(alMenos1CaracterEspecial);
+    mensajeErrorDisplay(contraseña3Caracteres);
     return (VerificarCantCaracteres(pass1, 8, contraseña3Caracteres) && alMenos1Mayus.style.color == "green" && alMenos1CaracterEspecial.style.color == "green" );
 }
 function ValidarEmail() {
     console.log("Entra a validarEmail");
     let email = document.getElementById("Email").value;
     const expresionMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    console.log(expresionMail.test(email));
-  
+    console.log(expresionMail.test(email));  
     mensajeMail.innerHTML = expresionMail.test(email) ? "El mail es válido" : "El mail no es válido";
+    mensajeErrorDisplay(mensajeMail);
     mensajeMail.style.color = expresionMail.test(email) ? "green" : "red";
     return mensajeMail.style.color == "green";
 }
@@ -45,7 +46,7 @@ function ValidarCoincidencia(){
     console.log(pass1, pass2);
         contraseñasIguales.innerHTML = (pass1==pass2) ? "Las contraseñas coinciden": "Las contraseñas no coinciden";
     contraseñasIguales.style.color = (pass1==pass2)  ? "green": "red";
-    
+    mensajeErrorDisplay(contraseñasIguales);    
 }
 
 
@@ -59,8 +60,16 @@ function ValidarNombre(){
     if(expresionRegular.test(nombre)){
        ret = VerificarCantCaracteres(nombre, 3, nombre8Caracteres)
     } 
+    mensajeErrorDisplay(nombre8Caracteres);
     return ret;
 } 
+
+function mensajeErrorDisplay(element) {
+    if (element.style.color === "green") {
+    } else {
+        element.style.display = "block";
+    }
+}
 
 function VerificarCantCaracteres(palabra, caracteres, contraseña3Caracteres){
      contraseña3Caracteres.style.color = (palabra.length >= caracteres ? "green" : "red");   
